@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gG5-LA-ogN">
+                                <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Play" id="P4K-Ak-oOf">
+                                        <connections>
+                                            <action selector="playButton:" destination="BYZ-38-t0r" id="kWH-tL-wms"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uTh-oO-2Jm"/>
+                                    <barButtonItem title="prev" id="Vnr-9u-hSy">
+                                        <connections>
+                                            <action selector="prevButton:" destination="BYZ-38-t0r" id="V2A-Or-W58"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CZp-RM-ifk"/>
+                                    <barButtonItem title="Pause" id="z3h-3l-JMr">
+                                        <connections>
+                                            <action selector="pauseButton:" destination="BYZ-38-t0r" id="ATV-cz-XGC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Kgx-b8-lOy"/>
+                                    <barButtonItem title="next" id="oUN-zJ-xz6">
+                                        <connections>
+                                            <action selector="nextButton:" destination="BYZ-38-t0r" id="gHF-nW-LbE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="F9Y-VC-qBp"/>
+                                    <barButtonItem title="Replay" id="e7B-wO-w9e">
+                                        <connections>
+                                            <action selector="replayButton:" destination="BYZ-38-t0r" id="udm-OA-1t9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GKq-rD-QUi">
+                                <rect key="frame" x="16" y="16" width="343" height="295"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GKq-rD-QUi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Fbs-Wh-LAH"/>
+                            <constraint firstItem="gG5-LA-ogN" firstAttribute="top" secondItem="GKq-rD-QUi" secondAttribute="bottom" id="SmN-52-x5S"/>
+                            <constraint firstItem="gG5-LA-ogN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V0A-iT-ytV"/>
+                            <constraint firstItem="gG5-LA-ogN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b1X-ya-cxK"/>
+                            <constraint firstAttribute="trailing" secondItem="GKq-rD-QUi" secondAttribute="trailing" constant="16" id="blx-dd-SJq"/>
+                            <constraint firstItem="GKq-rD-QUi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="hnv-EL-3R8"/>
+                            <constraint firstItem="gG5-LA-ogN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q1i-UY-ODE"/>
+                            <constraint firstAttribute="trailing" secondItem="gG5-LA-ogN" secondAttribute="trailing" id="uY3-RF-9fh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="posterImage" destination="GKq-rD-QUi" id="AJG-qM-wd8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Queued View Controller-->
+        <scene sceneID="sKH-xf-uj2">
+            <objects>
+                <viewController id="qZZ-ge-24T" customClass="QueuedViewController" customModule="AudioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xj1-9l-53R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aof-U2-K5L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZC-YP-fx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="484"/>
+        </scene>
+        <!--Music Player View Controller-->
+        <scene sceneID="Fjh-f2-eCa">
+            <objects>
+                <viewController id="O5l-qt-KLS" customClass="MusicPlayerViewController" customModule="AudioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="htF-tZ-lML">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8z2-4o-c57">
+                                <rect key="frame" x="0.0" y="312" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Play" id="3kz-g5-n8G">
+                                        <connections>
+                                            <action selector="play:" destination="O5l-qt-KLS" id="jQ7-hg-7Uw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RLP-6M-bGD"/>
+                                    <barButtonItem title="Pause" id="q7g-v4-sgW">
+                                        <connections>
+                                            <action selector="pause:" destination="O5l-qt-KLS" id="Vyr-NN-TFp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kmd-s2-l6A"/>
+                                    <barButtonItem title="Prev" id="zbI-HQ-cwr">
+                                        <connections>
+                                            <action selector="prev:" destination="O5l-qt-KLS" id="AF7-Kx-a0T"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SSD-Tf-S4A"/>
+                                    <barButtonItem title="Next" id="Ac5-Ua-LrE">
+                                        <connections>
+                                            <action selector="next:" destination="O5l-qt-KLS" id="V5W-ax-2d5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KR1-wI-NbB"/>
+                                    <barButtonItem title="Begin" id="mSh-1I-jqu">
+                                        <connections>
+                                            <action selector="begin:" destination="O5l-qt-KLS" id="Hci-aU-M6K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8z2-4o-c57" firstAttribute="centerX" secondItem="htF-tZ-lML" secondAttribute="centerX" id="BtD-Kd-YmX"/>
+                            <constraint firstItem="8z2-4o-c57" firstAttribute="leading" secondItem="htF-tZ-lML" secondAttribute="leading" id="OEB-4M-5o3"/>
+                            <constraint firstItem="8z2-4o-c57" firstAttribute="centerY" secondItem="htF-tZ-lML" secondAttribute="centerY" id="XWT-4R-gPY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="08A-sY-PdT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cB5-FM-W6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560" y="1224"/>
+        </scene>
+    </scenes>
+</document>
